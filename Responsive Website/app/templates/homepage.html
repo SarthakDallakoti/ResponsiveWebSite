@@ -1,0 +1,93 @@
+
+<html>
+  <head>
+	
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med Care </title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+
+    <!-- <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> medcare. </a>
+    
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href = "/login"> Login </a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header> -->
+    <header class="header">
+        <a href="/" class="logo"> <i class="fas fa-heartbeat"></i> medcare. </a></li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class= "accountHeader">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <a class="nav-link" href="/account">Home</a></li>
+                    <a class="nav-link" href="/">Advice</a></li>
+                    <a class="nav-link" href="/">Appointment</a></li>
+                    <a class="nav-link" href="/">Your Health</a></li>
+                    <a class="nav-link" href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+    </header>
+    <div>
+        {% block content %}{% endblock %}
+      </div>
+
+  <section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
+        </div>
+
+        <div class="box">
+            <h3>our services</h3>
+            <a href="#"> <i class="fas fa-chevron-right"></i> dental care </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> message therapy </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> cardioloty </a>
+            <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +44 07436699187 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +44 07432167895 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> medcare@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Leeds, Uk LS2 9JT </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+        </div>
+
+    </div>
+
+</section>
+    <script src="{{ url_for('static', filename='javaScript/script.js') }}"></script>
+  </body>
+</html>

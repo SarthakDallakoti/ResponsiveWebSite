@@ -1,0 +1,33 @@
+<html>
+   <head>
+      <title>Log In</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+   </head>
+   <body>
+<section class="book" id="book">
+
+   <div class="row">
+
+       <div class="image">
+           <img src="{{ url_for('static', filename='image/book-img.svg') }}" alt="">
+       </div>
+       <form action="" method="post" name="Login" id="caf">
+         {{ form.hidden_tag() }}
+            <h3>Log In</h3>
+
+            <div class= "boxLogin">
+               <p class = "boxText"><input placeholder="User Name">{{ form.userName}}</p>
+            </div>
+            <div class= "boxLogin">
+               <p class = "boxText"><input placeholder="Password">{{ form.userPassword}}</p>
+            </div>
+         <input type="submit" class="btn" value="Log In" >
+         <p class ="loginText"> Do not have an account? <a href="/create_account">Login</a></p>
+       </form>
+   </div>
+
+</section>
+<script src="{{ url_for('static', filename='javaScript/script.js') }}"></script>
+
+   </body>
+</html>

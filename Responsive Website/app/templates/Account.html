@@ -1,0 +1,21 @@
+{% extends "homepage.html" %}
+ {% block content %}
+ <!-- <div class="home">
+    <h4>Welcome Back {{current_user.User}}!</h4><br>
+    <a href ="\changePassword">Change Password</a>
+</div> -->
+<section class="home" id="home">
+
+    <div class="image">
+        <img src="{{ url_for('static', filename='image/account.png') }}" alt="">
+    </div>
+    <div class="content">
+        <div class="geeks">
+            <h3>Welcome Back {{current_user.User}}!</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed autem vero? Magnam, est laboriosam!</p>
+        <a href="#" class="btn"> contact us <span class="fas fa-chevron-right"></span> </a>
+    </div>
+
+</section>
+{% endblock %}
